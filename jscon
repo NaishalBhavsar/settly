@@ -1,0 +1,16 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api/upload": {
+      "post": {
+        "summary": "Upload file",
+        "security": [{"bearerAuth": []}],
+        "requestBody": {"content": {"multipart/form-data": {"schema": {"type": "object", "properties": {"file": {"type": "string", "format": "binary"}}}}}},
+        "responses": {"200": {"description": "Job created"}}
+      }
+    },
+    "/api/reconciliation/{jobId}": {
+      "post": {"summary": "Trigger reconciliation", "parameters": [{"name": "jobId", "in": "path"}]}
+    }
+  }
+}
