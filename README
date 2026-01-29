@@ -1,0 +1,27 @@
+# Smart Reconciliation & Audit System
+
+## Overview
+A MERN stack app for transaction reconciliation with audit trails.
+
+## Architecture
+- Frontend: React with Redux.
+- Backend: Express with async workers.
+- DB: MongoDB with indexed collections.
+
+## Setup
+1. Install dependencies: `npm install` in both folders.
+2. Start MongoDB.
+3. Run backend: `npm start` in /backend.
+4. Run frontend: `npm start` in /frontend.
+
+## Assumptions
+- Files up to 50k records.
+- Rules configurable via JSON.
+
+## Trade-Offs
+- No ML for matching; simple rules.
+- Async via workers; scalable but not distributed.
+
+## Limitations
+- No multi-file uploads; single file per job.
+- Excel parsing assumes standard format.
